@@ -7,13 +7,9 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <!--Développer le Header complet (image, overlay, titre, boutons CTA)-->
     <header class="header" id="home">
       <div class="header-overlay"></div>
       <div class="cardtext-bg-dark">
@@ -51,13 +47,29 @@
                 <a href="#contact" class="nav-link">Contact</a>
               </li>
             </ul>
+      
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="nav-logo">
+            <a href="#home" class="logo-link">
+              <span class="logo-ld">LD</span> Le Délice Sénégalais
+            </a>
+          </div>
 
-            <!-- Hamburger Menu -->
-            <div class="hamburger">
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
-            </div>
+          <ul class="nav-menu">
+            <li class="nav-item"><a href="#home" class="nav-link">Accueil</a></li>
+            <li class="nav-item"><a href="#menu" class="nav-link">Notre Menu</a></li>
+            <li class="nav-item"><a href="#specials" class="nav-link">Offres spéciales</a></li>
+            <li class="nav-item"><a href="#reservation" class="nav-link">Réservation</a></li>
+            <li class="nav-item"><a href="#gallery" class="nav-link">Galerie</a></li>
+            <li class="nav-item"><a href="#testimonials" class="nav-link">Témoignages</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
           </div>
         </nav>
         <div class="contenus_texte">
@@ -80,13 +92,27 @@
               >
                 <div class="mouse"><div class="wheel"></div></div>
               </div>
+        </div>
+      </nav>
+
+      <div class="contenus_texte">
+        <h5 class="nom_restaurant" aria-label="Nom du restaurant">
+          Le Délice <br /><span style="color: #ffd700">Sénégalais</span>
+        </h5>
+        <div class="slogan_boutons">
+          <h1 class="slogan">
+            L'authenticité africaine sublimée par la haute gastronomie
+          </h1>
+          <div class="header-buttons">
+            <a href="#menu" class="btn btn-primary">Réserver une Table</a>
+            <a href="#reservation" class="btn btn-secondary">Commander maintenant</a>
+            <div class="mouse-container" aria-label="Icône souris animée" role="img">
+              <div class="mouse"><div class="wheel"></div></div>
             </div>
           </div>
         </div>
       </div>
     </header>
-
-    <!-- Sections placeholder -->
 
     <section id="menu" class="section">
       <div class="container"></div>
@@ -94,6 +120,7 @@
 
     <section id="specials" class="section">
       <div class="container"></div>
+      
     </section>
 
     <section id="reservation" class="section">
@@ -149,24 +176,17 @@
               </div>
             </section>
 
-            <section
-              class="card beige"
-              aria-label="Horaires d'ouverture"
-              style="margin-top: 1rem"
-            >
+            <section class="card beige" aria-label="Horaires d'ouverture" style="margin-top: 1rem">
               <h2>Horaires d'ouverture</h2>
               <div class="hours" aria-label="Horaires">
                 <div class="hours-line">
-                  <span class="hours-label">Lundi - Jeudi</span
-                  ><span class="hours-value">12h00 - 22h00</span>
+                  <span class="hours-label">Lundi - Jeudi</span><span class="hours-value">12h00 - 22h00</span>
                 </div>
                 <div class="hours-line">
-                  <span class="hours-label">Vendredi - Samedi</span
-                  ><span class="hours-value">12h00 - 23h30</span>
+                  <span class="hours-label">Vendredi - Samedi</span><span class="hours-value">12h00 - 23h30</span>
                 </div>
                 <div class="hours-line">
-                  <span class="hours-label">Dimanche</span
-                  ><span class="hours-value">12h00 - 21h00</span>
+                  <span class="hours-label">Dimanche</span><span class="hours-value">12h00 - 21h00</span>
                 </div>
               </div>
             </section>
@@ -174,161 +194,79 @@
 
           <section class="card beige" aria-label="Formulaire de contact">
             <h2>Envoyez-nous un message</h2>
-            <form
-              action="#"
-              method="post"
-              onsubmit="
-                event.preventDefault();
-                alert('Message envoyé (demo)');
-              "
-            >
+            <form action="#" method="post" onsubmit="event.preventDefault(); alert('Message envoyé (demo)');">
               <div class="form-field">
                 <label for="nom">Nom *</label>
-                <input
-                  id="nom"
-                  name="nom"
-                  type="text"
-                  placeholder="Votre nom"
-                  required
-                />
+                <input id="nom" name="nom" type="text" placeholder="Votre nom" required />
               </div>
               <div class="form-field">
                 <label for="telephone">Téléphone *</label>
-                <input
-                  id="telephone"
-                  name="telephone"
-                  type="tel"
-                  placeholder="+225 07 78 01 45 37"
-                  required
-                />
+                <input id="telephone" name="telephone" type="tel" placeholder="+225 07 78 01 45 37" required />
               </div>
               <div class="form-field">
                 <label for="email">Email *</label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  placeholder="votre@email.com"
-                  required
-                />
+                <input id="email" name="email" type="email" placeholder="votre@email.com" required />
               </div>
               <div class="form-field">
                 <label for="objet">Objet *</label>
-                <input
-                  id="objet"
-                  name="objet"
-                  type="text"
-                  placeholder="Objet de votre message"
-                  required
-                />
+                <input id="objet" name="objet" type="text" placeholder="Objet de votre message" required />
               </div>
               <div class="form-field">
                 <label for="message">Message *</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="4"
-                  placeholder="Votre message..."
-                  required
-                ></textarea>
+                <textarea id="message" name="message" rows="4" placeholder="Votre message..." required></textarea>
               </div>
               <button type="submit" class="btn-submit">Envoyer</button>
             </form>
           </section>
         </div>
-        <footer class="footer">
-          <div class="container footer-container">
-            <div class="footer-col">
-              <div class="nav-logo">
-                <a href="#home" class="logo-link">
-                  <span class="logo-ld">LD</span>
-                  <span style="color: #ffd700">Délice Sénégalais</span>
-                </a>
-              </div>
-              <p>
-                L'authenticité africaine sublimée par la haute gastronomie. </br> Une expérience culinaire unique à Paris.
-              </p>
-            </div>
+      </div>
+    </section>
 
-            <div class="footer-col">
-              <h4>Liens rapides</h4>
-              <ul>
-                <li><a href="#home">Accueil</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#reservation">Réservation</a></li>
-                <li><a href="#contact">Contact</a></li>
-              </ul>
-            </div>
-
-            <div class="footer-col">
-              <h4>Horaires</h4>
-              <p>Lun - Jeu: 12h - 22h</p>
-              <p>Ven - Sam: 12h - 23h30</p>
-              <p>Dimanche: 12h - 21h</p>
-            </div>
-
-            <div class="footer-col">
-              <h4>Suivez-nous</h4>
-              <div class="social-links">
-                <a href="#" aria-label="Facebook"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="30"
-                    fill="currentColor"
-                    class="bi bi-facebook"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
-                    /></svg
-                ></a>
-                <a href="#" aria-label="Instagram"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="30"
-                    fill="currentColor"
-                    class="bi bi-whatsapp"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"
-                    /></svg
-                ></a>
-                <a href="#" aria-label="Twitter"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="30"
-                    fill="currentColor"
-                    class="bi bi-messenger"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M0 7.76C0 3.301 3.493 0 8 0s8 3.301 8 7.76-3.493 7.76-8 7.76c-.81 0-1.586-.107-2.316-.307a.64.64 0 0 0-.427.03l-1.588.702a.64.64 0 0 1-.898-.566l-.044-1.423a.64.64 0 0 0-.215-.456C.956 12.108 0 10.092 0 7.76m5.546-1.459-2.35 3.728c-.225.358.214.761.551.506l2.525-1.916a.48.48 0 0 1 .578-.002l1.869 1.402a1.2 1.2 0 0 0 1.735-.32l2.35-3.728c.226-.358-.214-.761-.551-.506L9.728 7.381a.48.48 0 0 1-.578.002L7.281 5.98a1.2 1.2 0 0 0-1.735.32z"
-                    /></svg
-                ></a>
-              </div>
-              <p class="footer-address">
-                Rue princesse <br />Côte d'ivoire, 01 BP 12345 Abidjan 01
-              </p>
-            </div>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <div class="nav-logo">
+            <a href="#home" class="logo-link" style="color: #fff;">
+              <span class="logo-ld">LD</span>
+              <span style="color: #ffd700">Délice Sénégalais</span>
+            </a>
           </div>
-          
-          <div class="footer-bottom">
-             <hr>
-             <div class="footer-bottom-content">
-            <p>&copy; 2026 Le Délice Sénégalais. Tous droits réservés.</p>
-            <P> </P>
-        
+          <p>
+            L'authenticité africaine sublimée par la haute gastronomie. <br/> Une expérience culinaire unique.
+          </p>
+        </div>
 
-            <p><a href=""> Mentions légales </a></p>
-           
-          <p><a href=""> Politique de confidentialité  </a></p>
+        <div class="footer-col">
+          <h4>Liens rapides</h4>
+          <ul>
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#reservation">Réservation</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Horaires</h4>
+          <p>Lun - Jeu: 12h - 22h</p>
+          <p>Ven - Sam: 12h - 23h30</p>
+          <p>Dimanche: 12h - 21h</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Suivez-nous</h4>
+          <div class="social-links" style="display: flex; gap: 15px; margin-bottom: 15px;">
+            <a href="#" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/></svg>
+            </a>
+            <a href="#" aria-label="WhatsApp">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/></svg>
+            </a>
           </div>
-          </div>
-        </footer>
+          <p class="footer-address">
+            Rue princesse <br />Côte d'ivoire, 01 BP 12345 Abidjan 01
+          </p>
+        </div>
       </div>
     </section>
     
@@ -574,6 +512,17 @@
       </div>
     </div>
     
+      
+      <div class="footer-bottom">
+         <hr style="border-color: #333; margin-bottom: 20px;">
+         <div class="footer-bottom-content">
+          <p>&copy; 2026 Le Délice Sénégalais. Tous droits réservés.</p>
+          <p><a href="">Mentions légales</a></p>
+          <p><a href="">Politique de confidentialité</a></p>
+        </div>
+      </div>
+    </footer>
+
     <script src="js/script.js"></script>
   </body>
 </html>
