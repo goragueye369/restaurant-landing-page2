@@ -8,11 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.nav-link');
 
   if (hamburger && navMenu) {
+    // Ouvrir/Fermer le menu
     hamburger.addEventListener('click', () => {
       hamburger.classList.toggle('active');
       navMenu.classList.toggle('active');
     });
 
+    // Fermer le menu lors du clic sur un lien
     navLinks.forEach((link) => {
       link.addEventListener('click', () => {
         hamburger.classList.remove('active');
@@ -22,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================
-  // 2. EFFET DE LA NAVBAR AU SCROLL (FOND SOMBRE)
+  // 2. EFFET DE LA NAVBAR AU SCROLL
   // ==========================================
   const navbar = document.querySelector('.navbar');
   
@@ -37,14 +39,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================
-  // 3. APPARITION DYNAMIQUE DES SECTIONS (REVEAL)
+  // 3. APPARITION DYNAMIQUE (REVEAL)
   // ==========================================
   const sections = document.querySelectorAll('.section');
   
   const appearOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.15
+    threshold: 0.15 
   };
 
   const appearOnScroll = new IntersectionObserver((entries, observer) => {
@@ -62,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================
-  // 4. ILLUMINATION DES LIENS AU SCROLL (SCROLL SPY)
+  // 4. SCROLL SPY (ILLUMINATION DES LIENS)
   // ==========================================
   const spySections = document.querySelectorAll('header, section'); 
   
