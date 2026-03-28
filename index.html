@@ -33,7 +33,7 @@
                 <a href="#home" class="nav-link">Accueil</a>
               </li>
               <li class="nav-item">
-                <a href="#menu" class="nav-link">Notre Menu</a>
+                <a href="#menu" class="nav-link" onclick="openMenuPopup(event)">Notre Menu</a>
               </li>
               <li class="nav-item">
                 <a href="#specials" class="nav-link">Offres spéciales</a>
@@ -69,8 +69,8 @@
               L'authenticité africaine sublimée par la haute gastronomie
             </h1>
             <div class="header-buttons">
-              <a href="#menu" class="btn btn-primary">Réserver une Table</a>
-              <a href="#reservation" class="btn btn-secondary"
+              <a href="#reservation" class="btn btn-primary">Réserver une Table</a>
+              <a href="#contact" class="btn btn-secondary"
                 >Commander maintenant</a
               >
               <div
@@ -331,6 +331,249 @@
         </footer>
       </div>
     </section>
+    
+    <!-- Menu Popup -->
+    <div id="menuPopup" class="menu-popup">
+      <!-- Backdrop -->
+      <div class="menu-backdrop" onclick="closeMenuPopup()"></div>
+      
+      <!-- Popup Content -->
+      <div class="menu-popup-content">
+        <!-- Header -->
+        <div class="menu-popup-header">
+          <h2 class="menu-popup-title">Menu Complet</h2>
+          <button class="menu-popup-close" onclick="closeMenuPopup()">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        
+        <!-- Menu Content -->
+        <div class="menu-popup-body">
+          <!-- Entrées -->
+          <div class="menu-category">
+            <h3 class="category-title">Entrées</h3>
+            <div class="menu-grid">
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1673188979255-e08a5791d193?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZnJpY2FuJTIwZnJpZWQlMjBwYXN0cnklMjBzYW1vc2F8ZW58MXx8fHwxNzcxNzYyMjk1fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Pastels au Thon" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Pastels au Thon</span>
+                  <span class="menu-item-price">12€</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1756137949459-8aad8455d040?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWVmJTIwZW1wYW5hZGElMjBtZWF0JTIwcGFzdHJ5fGVufDF8fHx8MTc3MTc2MjcxNHww&ixlib=rb-4.1.0&q=80&w=1080" alt="Pastels à la Viande" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Pastels à la Viande</span>
+                  <span class="menu-item-price">12€</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1517427743529-b2946c4be119?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2RmaXNoJTIwZnJpdHRlcnMlMjBnb2xkZW4lMjBjcmlzcHl8ZW58MXx8fHwxNzcxNzYyNzE0fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Accras de Morue" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Accras de Morue</span>
+                  <span class="menu-item-price">14€</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1530451444500-5dce90309851?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWFuJTIwc2FsYWQlMjBhZnJpY2FuJTIwbmllYmV8ZW58MXx8fHwxNzcxNzYyNDM5fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Salade Niébé" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Salade Niébé</span>
+                  <span class="menu-item-price">10€</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Plats Principaux -->
+          <div class="menu-category">
+            <h3 class="category-title">Plats Principaux</h3>
+            <div class="menu-grid">
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1715692727499-cd7ba190587c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0aGllYm91ZGllbm5lJTIwc2VuZWdhbGVzZSUyMHJpY2UlMjBmaXNoJTIwZGlzaHxlbnwxfHx8fDE3NzE3NjIyOTN8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Thiéboudienne (Riz au Poisson)" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Thiéboudienne (Riz au Poisson)</span>
+                  <span class="menu-item-price">28€</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1757715377671-01c20cfa1880?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlja2VuJTIwcmljZSUyMGdvdXJtZXQlMjBwbGF0ZXxlbnwxfHx8fDE3NzE3NjIzMDJ8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Yassa Poulet" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Yassa Poulet</span>
+                  <span class="menu-item-price">24€</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1665582038443-7d55b4673c57?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmlsbGVkJTIwZmlzaCUyMHBsYXRlJTIwYWZyaWNhbnxlbnwxfHx8fDE3NzE3NjI3MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Yassa Poisson" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Yassa Poisson</span>
+                  <span class="menu-item-price">26€</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1765118437934-ef3a79885243?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWF0JTIwc3RldyUyMGJvd2wlMjByZXN0YXVyYW50fGVufDF8fHx8MTc3MTc2MjMwMnww&ixlib=rb-4.1.0&q=80&w=1080" alt="Mafé Agneau" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Mafé Agneau</span>
+                  <span class="menu-item-price">30€</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1665332561290-cc6757172890?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlja2VuJTIwcGVhbnV0JTIwc3RldyUyMGFmcmljYW58ZW58MXx8fHwxNzcxNzYyNzE1fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Mafé Poulet" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Mafé Poulet</span>
+                  <span class="menu-item-price">24€</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1741026079488-f22297dc3036?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxqb2xsb2YlMjByaWNlJTIwd2VzdCUyMGFmcmljYW4lMjB0b21hdG98ZW58MXx8fHwxNzcxNzYyMjk0fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Jollof Rice Royal" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Jollof Rice Royal</span>
+                  <span class="menu-item-price">26€</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1676700310614-600f2aa255ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZnJpY2FuJTIwY2hpY2tlbiUyMHBsYW50YWlucyUyMGRpc2h8ZW58MXx8fHwxNzcxNzYyNDQwfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Poulet DG" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Poulet DG</span>
+                  <span class="menu-item-price">28€</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1677094544034-01421fc6c874?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmlsbGVkJTIwZmlzaCUyMGFmcmljYW4lMjBjdWlzaW5lfGVufDF8fHx8MTc3MTY5ODI0MXww&ixlib=rb-4.1.0&q=80&w=1080" alt="Poisson Braisé" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Poisson Braisé</span>
+                  <span class="menu-item-price">32€</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Desserts -->
+          <div class="menu-category">
+            <h3 class="category-title">Desserts</h3>
+            <div class="menu-grid">
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1671523557643-b80db31443d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2NvbnV0JTIwY3JlYW0lMjBkZXNzZXJ0JTIwcHVkZGluZ3xlbnwxfHx8fDE3NzE3NjIyOTl8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Thiakry Coco" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Thiakry Coco</span>
+                  <span class="menu-item-price">10€</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1626256139204-8b4c568dd71b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2YW5pbGxhJTIwcHVkZGluZyUyMGRlc3NlcnQlMjBjcmVhbXxlbnwxfHx8fDE3NzE3NjI0NDJ8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Chakery Vanille" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Chakery Vanille</span>
+                  <span class="menu-item-price">10€</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1666288937917-785145cec5df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaW5rJTIwZGVzc2VydCUyMGNyZWFtJTIwcHVkZGluZ3xlbnwxfHx8fDE3NzE3NjI3MTV8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Crème de Bissap" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Crème de Bissap</span>
+                  <span class="menu-item-price">8€</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1696824818288-83fd13091064?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cm9waWNhbCUyMGZydWl0JTIwcGxhdHRlciUyMGZyZXNofGVufDF8fHx8MTc3MTc2MjQ0MXww&ixlib=rb-4.1.0&q=80&w=1080" alt="Fruits de Saison" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Fruits de Saison</span>
+                  <span class="menu-item-price">8€</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Boissons -->
+          <div class="menu-category">
+            <h3 class="category-title">Boissons</h3>
+            <div class="menu-grid">
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1725790803859-edc661663bb4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZWQlMjBjb2NrdGFpbCUyMGhpYmlzY3VzJTIwZHJpbmt8ZW58MXx8fHwxNzcxNzYyNDQ1fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Jus de Bissap" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Jus de Bissap</span>
+                  <span class="menu-item-price">6€</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1620205252136-0944971c1ca2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnaW5nZXIlMjBqdWljZSUyMGJldmVyYWdlJTIwZnJlc2h8ZW58MXx8fHwxNzcxNzYyNDQxfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Jus de Gingembre" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Jus de Gingembre</span>
+                  <span class="menu-item-price">6€</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1517448931760-9bf4414148c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3aGl0ZSUyMG1pbGt5JTIwZHJpbmslMjBiYW9iYWJ8ZW58MXx8fHwxNzcxNzYyNzE2fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Bouye (Jus de Baobab)" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Bouye (Jus de Baobab)</span>
+                  <span class="menu-item-price">7€</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1763637674227-e404f9039ae7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cm9waWNhbCUyMGNvY2t0YWlsJTIwb3JhbmdlJTIwanVpY2V8ZW58MXx8fHwxNzcxNzYyNDQ1fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Cocktail Maison" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Cocktail Maison</span>
+                  <span class="menu-item-price">12€</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Menu Dégustation -->
+          <div class="menu-tasting">
+            <p class="tasting-text">
+              <span class="tasting-title">Menu Dégustation 3 plats :</span> 
+              <span class="tasting-price">45€</span>
+              <br />
+              <span class="tasting-title">Menu Dégustation 5 plats :</span> 
+              <span class="tasting-price">65€</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <script src="js/script.js"></script>
   </body>
 </html>

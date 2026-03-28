@@ -103,4 +103,44 @@ document.addEventListener('DOMContentLoaded', () => {
     sectionObserver.observe(section);
   });
 
+  // ==========================================
+  // 5. MENU POPUP
+  // ==========================================
+  const menuPopup = document.getElementById('menuPopup');
+  const menuButton = document.querySelector('[onclick="openMenuPopup(event)"]');
+
+  // Fonction pour ouvrir le popup menu
+  window.openMenuPopup = function(event) {
+    event.preventDefault();
+    if (menuPopup) {
+      menuPopup.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Empêche le scroll du body
+    }
+  };
+
+  // Fonction pour fermer le popup menu
+  window.closeMenuPopup = function() {
+    if (menuPopup) {
+      menuPopup.classList.remove('active');
+      document.body.style.overflow = ''; // Réactive le scroll du body
+    }
+  };
+
+  // Fermer le popup avec la touche Escape
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && menuPopup && menuPopup.classList.contains('active')) {
+      closeMenuPopup();
+    }
+  });
+
+  // Fermer le popup au clic sur le backdrop (déjà géré en HTML avec onclick)
+  // mais on ajoute une sécurité ici
+  if (menuPopup) {
+    menuPopup.addEventListener('click', (event) => {
+      if (event.target === menuPopup || event.target.classList.contains('menu-backdrop')) {
+        closeMenuPopup();
+      }
+    });
+  }
+
 });
