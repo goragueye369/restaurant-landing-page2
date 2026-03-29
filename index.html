@@ -69,7 +69,7 @@
               L'authenticité africaine sublimée par la haute gastronomie
             </h1>
             <div class="header-buttons">
-              <a href="#reservation" class="btn btn-primary">Réserver une Table</a>
+              <a href="#reservation" class="btn btn-white">Réserver une Table</a>
               <a href="#contact" class="btn btn-secondary"
                 >Commander maintenant</a
               >
@@ -88,36 +88,331 @@
 
     <!-- Sections placeholder -->
 
-    <section id="menu" class="section">
-      <div class="container"></div>
-    </section>
-
     <section id="specials" class="section">
-      <div class="container"></div>
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Offres <span style="color: #D4AF37">Spéciales</span></h2>
+          <p class="section-subtitle">Profitez de nos promotions exceptionnelles</p>
+        </div>
+        <div class="specials-grid">
+          <div class="special-card">
+            <div class="special-tag">Offre limitée</div>
+            <div class="special-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </div>
+            <h3 class="special-title">-20% sur tous les desserts</h3>
+            <p class="special-description">Valable du lundi au jeudi</p>
+            <div class="special-decor"></div>
+          </div>
+          
+          <div class="special-card">
+            <div class="special-tag">Sam & Dim</div>
+            <div class="special-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <h3 class="special-title">Menu Week-end Royal</h3>
+            <p class="special-description">Entrée + Plat + Dessert + Boisson = 55€</p>
+            <div class="special-decor"></div>
+          </div>
+          
+          <div class="special-card">
+            <div class="special-tag">Tous les jours</div>
+            <div class="special-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14"></polygon>
+              </svg>
+            </div>
+            <h3 class="special-title">Happy Hour</h3>
+            <p class="special-description">Cocktails à 8€ de 18h à 20h</p>
+            <div class="special-decor"></div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="reservation" class="section">
-      <div class="container"></div>
+      <div class="container">
+        <div class="reservation-header">
+          <h2 class="section-title">Réserver une <span style="color: #D4AF37">Table</span></h2>
+          <p class="reservation-subtitle" style="color: white;">Vivez une expérience gastronomique inoubliable</p>
+        </div>
+        
+        <form class="reservation-form" onsubmit="handleReservation(event)">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="res-name" class="form-label">
+                <svg class="form-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                Nom & Prénom *
+              </label>
+              <input
+                type="text"
+                id="res-name"
+                name="name"
+                required
+                class="form-input"
+                placeholder="Votre nom complet"
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="res-date" class="form-label">
+                <svg class="form-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                Date *
+              </label>
+              <input
+                type="date"
+                id="res-date"
+                name="date"
+                required
+                class="form-input"
+                placeholder="jj/mm/aaaa"
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="res-time" class="form-label">
+                <svg class="form-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                Heure *
+              </label>
+              <input
+                type="time"
+                id="res-time"
+                name="time"
+                required
+                class="form-input"
+                placeholder="--:--"
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="res-guests" class="form-label">
+                <svg class="form-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                Nombre de personnes *
+              </label>
+              <select
+                id="res-guests"
+                name="guests"
+                required
+                class="form-input"
+              >
+                <option value="1">1 personne</option>
+                <option value="2" selected>2 personnes</option>
+                <option value="3">3 personnes</option>
+                <option value="4">4 personnes</option>
+                <option value="5">5 personnes</option>
+                <option value="6">6 personnes</option>
+                <option value="7">7 personnes</option>
+                <option value="8">8 personnes</option>
+                <option value="9">9 personnes</option>
+                <option value="10">10 personnes</option>
+                <option value="10+">10+ personnes</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="res-phone" class="form-label">
+                <svg class="form-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 0 1.72-2V7a2 2 0 0 0-2-1.72 12.84 12.84 0 0 0-.7-2.81 2 2 0 0 0-1.72 2z"></path>
+                </svg>
+                Téléphone *
+              </label>
+              <input
+                type="tel"
+                id="res-phone"
+                name="phone"
+                required
+                class="form-input"
+                placeholder="+33 6 12 34 56 78"
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="res-email" class="form-label">
+                <svg class="form-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                Email *
+              </label>
+              <input
+                type="email"
+                id="res-email"
+                name="email"
+                required
+                class="form-input"
+                placeholder="votre@email.com"
+              />
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="res-comments" class="form-label">
+              <svg class="form-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8.9z"></path>
+              </svg>
+              Commentaires (Allergies, préférences...)
+            </label>
+            <textarea
+              id="res-comments"
+              name="comments"
+              rows="4"
+              class="form-input"
+              placeholder="Indiquez vos préférences ou besoins spéciaux..."
+            ></textarea>
+          </div>
+
+          {/* Submit Button */}
+          <div class="form-actions">
+            <button type="submit" class="btn-submit">
+              Confirmer la réservation
+            </button>
+          </div>
+        </form>
+      </div>
     </section>
 
     <section id="gallery" class="section">
-      <div class="container"></div>
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Galerie</h2>
+          <p class="section-subtitle">Découvrez l'ambiance et nos créations culinaires</p>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1715692727499-cd7ba190587c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0aGllYm91ZGllbm5lJTIwcmljZmlzaCUyMGRpc2glMjg3NzYyMjk1fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Plat principal" />
+            <div class="gallery-overlay">
+              <h4>Thiéboudienne</h4>
+              <p>Notre plat signature</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1757715377671-01c20cfa1880?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlja2VuJTIwcmljZ291cm1ldCUyMHBsYXQlMjE3NzYyMzAyfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Yassa poulet" />
+            <div class="gallery-overlay">
+              <h4>Yassa Poulet</h4>
+              <p>Saveur citronnée et oignon</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1765118437934-ef3a79885243?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWF0JTIwc3RldyUyMGJvd2clMjMwMjMwfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Mafé agneau" />
+            <div class="gallery-overlay">
+              <h4>Mafé Agneau</h4>
+              <p>Sauce arachide savoureuse</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1677094544034-01421fc6c874?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmlsbGVkJTIwZmlzaCUyMGZyaWNhaW58ZW58MXx8fHwxNzE2OTgyNDQxfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Poisson braisé" />
+            <div class="gallery-overlay">
+              <h4>Poisson Braisé</h4>
+              <p>Frais et parfumé</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1671523557643-b80db31443d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2NvbnV0JTIwY3JlYW0lMjB1ZGRpbmclMjE3NzE3NjIyOTk4fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Thiakry" />
+            <div class="gallery-overlay">
+              <h4>Thiakry Coco</h4>
+              <p>Dessert traditionnel</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1725790803859-edc661663bb4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZWQlMjBvY2t0YWlsJTIwaGliaXNjdXMlMjRyaW5rfGVufDF8fHx8MTc3MTc2NDQ1fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Jus de bissap" />
+            <div class="gallery-overlay">
+              <h4>Jus de Bissap</h4>
+              <p>Boisson rafraîchissante</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1556909218-d0b4bfde6d6b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzZW5lJTIwYXJyaWNlJTIwZmFtaWx5fGVufDF8fHx8MTU1NzA4MjM0fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Accras" />
+            <div class="gallery-overlay">
+              <h4>Accras de Morue</h4>
+              <p>Beignets de poisson</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1530451444500-5dce90309851?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWJuJTIwc2FsYWQlMjBhZnJpY2FuJTIwbmllYmV8ZW58MXx8fHwxNzE3NjI0MzkfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Salade" />
+            <div class="gallery-overlay">
+              <h4>Salade Niébé</h4>
+              <p>Haricots et légumes frais</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1665582038443-7d55b4673c57?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmlsbGVkJTIwZmlzaCUyMHBsYXRlJTIwYWZyaWNhbnxlbnwxfHx8fDE3MTc2MjcxNjgwfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Yassa poisson" />
+            <div class="gallery-overlay">
+              <h4>Yassa Poisson</h4>
+              <p>Poisson mariné au citron</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="testimonials" class="section">
-      <div class="container"></div>
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Témoignages</h2>
+          <p class="section-subtitle">Ce que disent nos clients</p>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"Une expérience culinaire exceptionnelle ! Les saveurs authentiques du Sénégal dans un cadre chaleureux. Le thiéboudienne est divin !"</p>
+            <div class="testimonial-author">
+              <strong>Marie K.</strong>
+              <span>Client fidèle</span>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"L'accueil est formidable et la qualité des plats est irréprochable. Je reviens chaque semaine avec ma famille."</p>
+            <div class="testimonial-author">
+              <strong>Pierre L.</strong>
+              <span>Régulier</span>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"Le meilleur restaurant sénégalais de Paris ! Les portions sont généreuses et les prix très raisonnables."</p>
+            <div class="testimonial-author">
+              <strong>Aminata B.</strong>
+              <span>Nouvelle cliente</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="section section_contact">
+    <section id="contact" class="section">
       <div class="container">
-        <div class="les_contact">
-          <h5 class="nous_contacter" aria-label="Nom du restaurant">
-            <span style="color: aliceblue">Nous</span>
-            <span style="color: #ffd700">Contacter</span>
-          </h5>
-          <h3 style="color: aliceblue; text-align: center">
-            N'hésitez pas à nous écrire pour toute question ou demande
-          </h3>
+        <div class="section-header">
+          <h2 class="section-title">Nous <span style="color: #D4AF37">Contacter</span></h2>
+          <p class="section-subtitle">N'hésitez pas à nous écrire pour toute question ou demande</p>
         </div>
 
         <div class="grid-two-columns-equal">
@@ -213,13 +508,12 @@
                 />
               </div>
               <div class="form-field">
-                <label for="objet">Objet *</label>
+                <label for="objet">Objet</label>
                 <input
                   id="objet"
                   name="objet"
                   type="text"
-                  placeholder="Objet de votre message"
-                  required
+                  placeholder="Sujet de votre message"
                 />
               </div>
               <div class="form-field">
@@ -227,16 +521,19 @@
                 <textarea
                   id="message"
                   name="message"
-                  rows="4"
+                  rows="5"
                   placeholder="Votre message..."
                   required
                 ></textarea>
               </div>
-              <button type="submit" class="btn-submit">Envoyer</button>
+              <button type="submit" class="btn-submit">Envoyer le message</button>
             </form>
           </section>
         </div>
-        <footer class="footer">
+      </div>
+    </section>
+
+    <footer class="footer">
           <div class="container footer-container">
             <div class="footer-col">
               <div class="nav-logo">
