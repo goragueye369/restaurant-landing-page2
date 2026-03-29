@@ -7,87 +7,412 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <!--Développer le Header complet (image, overlay, titre, boutons CTA)-->
     <header class="header" id="home">
-      
-      <nav class="navbar">
-        <div class="nav-container">
-          <div class="nav-logo">
-            <a href="#home" class="logo-link">
-              <span class="logo-ld">LD</span> Le Délice Sénégalais
-            </a>
+      <div class="header-overlay"></div>
+      <div class="cardtext-bg-dark">
+        <!-- Image de fond du header et ajout du texte sur l'image -->
+        <!-- Navbar -->
+        <nav class="navbar">
+          <div class="nav-container">
+            <div class="nav-logo">
+              <a href="#home" class="logo-link">
+                <span class="logo-ld">LD</span> Le Délice Sénégalais
+              </a>
+            </div>
+
+            <!-- Menu Desktop -->
+            <ul class="nav-menu">
+              <li class="nav-item">
+                <a href="#home" class="nav-link">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a href="#menu" class="nav-link" onclick="openMenuPopup(event)">Notre Menu</a>
+              </li>
+              <li class="nav-item">
+                <a href="#specials" class="nav-link">Offres spéciales</a>
+              </li>
+              <li class="nav-item">
+                <a href="#reservation" class="nav-link">Réservation</a>
+              </li>
+              <li class="nav-item">
+                <a href="#gallery" class="nav-link">Galerie</a>
+              </li>
+              <li class="nav-item">
+                <a href="#testimonials" class="nav-link">Témoignages</a>
+              </li>
+              <li class="nav-item">
+                <a href="#contact" class="nav-link">Contact</a>
+              </li>
+            </ul>
+
+            <!-- Hamburger Menu -->
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
           </div>
-
-          <ul class="nav-menu">
-            <li class="nav-item"><a href="#home" class="nav-link">Accueil</a></li>
-            <li class="nav-item"><a href="#menu" class="nav-link">Notre Menu</a></li>
-            <li class="nav-item"><a href="#specials" class="nav-link">Offres spéciales</a></li>
-            <li class="nav-item"><a href="#reservation" class="nav-link">Réservation</a></li>
-            <li class="nav-item"><a href="#gallery" class="nav-link">Galerie</a></li>
-            <li class="nav-item"><a href="#testimonials" class="nav-link">Témoignages</a></li>
-            <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-          </ul>
-
-          <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
-        </div>
-      </nav>
-
-      <div class="contenus_texte">
-        <h5 class="nom_restaurant" aria-label="Nom du restaurant">
-          Le Délice <br /><span style="color: #ffd700">Sénégalais</span>
-        </h5>
-        <div class="slogan_boutons">
-          <h1 class="slogan">
-            L'authenticité africaine sublimée par la haute gastronomie
-          </h1>
-          <div class="header-buttons">
-            <a href="#menu" class="btn btn-primary">Réserver une Table</a>
-            <a href="#reservation" class="btn btn-secondary">Commander maintenant</a>
-            <div class="mouse-container" aria-label="Icône souris animée" role="img">
-              <div class="mouse"><div class="wheel"></div></div>
+        </nav>
+        <div class="contenus_texte">
+          <h5 class="nom_restaurant" aria-label="Nom du restaurant">
+            Le Délice <br /><span style="color: #ffd700">Sénégalais</span>
+          </h5>
+          <div class="slogan_boutons">
+            <h1 class="slogan">
+              L'authenticité africaine sublimée par la haute gastronomie
+            </h1>
+            <div class="header-buttons">
+              <a href="#reservation" class="btn btn-white">Réserver une Table</a>
+              <a href="#contact" class="btn btn-secondary"
+                >Commander maintenant</a
+              >
+              <div
+                class="mouse-container"
+                aria-label="Icône souris animée"
+                role="img"
+              >
+                <div class="mouse"><div class="wheel"></div></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </header>
 
-    <section id="menu" class="section">
-      <div class="container"></div>
-    </section>
+    <!-- Sections placeholder -->
 
     <section id="specials" class="section">
-      <div class="container"></div>
-      
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Offres <span style="color: #D4AF37">Spéciales</span></h2>
+          <p class="section-subtitle">Profitez de nos promotions exceptionnelles</p>
+        </div>
+        <div class="specials-grid">
+          <div class="special-card">
+            <div class="special-tag">Offre limitée</div>
+            <div class="special-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </div>
+            <h3 class="special-title">-20% sur tous les desserts</h3>
+            <p class="special-description">Valable du lundi au jeudi</p>
+            <div class="special-decor"></div>
+          </div>
+          
+          <div class="special-card">
+            <div class="special-tag">Sam & Dim</div>
+            <div class="special-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <h3 class="special-title">Menu Week-end Royal</h3>
+            <p class="special-description">Entrée + Plat + Dessert + Boisson = 55€</p>
+            <div class="special-decor"></div>
+          </div>
+          
+          <div class="special-card">
+            <div class="special-tag">Tous les jours</div>
+            <div class="special-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14"></polygon>
+              </svg>
+            </div>
+            <h3 class="special-title">Happy Hour</h3>
+            <p class="special-description">Cocktails à 8€ de 18h à 20h</p>
+            <div class="special-decor"></div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="reservation" class="section">
-      <div class="container"></div>
+      <div class="container">
+        <div class="reservation-header">
+          <h2 class="section-title">Réserver une <span style="color: #D4AF37">Table</span></h2>
+          <p class="reservation-subtitle" style="color: white;">Vivez une expérience gastronomique inoubliable</p>
+        </div>
+        
+        <form class="reservation-form" onsubmit="handleReservation(event)">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="res-name" class="form-label">
+                <svg class="form-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                Nom & Prénom *
+              </label>
+              <input
+                type="text"
+                id="res-name"
+                name="name"
+                required
+                class="form-input"
+                placeholder="Votre nom complet"
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="res-date" class="form-label">
+                <svg class="form-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                Date *
+              </label>
+              <input
+                type="date"
+                id="res-date"
+                name="date"
+                required
+                class="form-input"
+                placeholder="jj/mm/aaaa"
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="res-time" class="form-label">
+                <svg class="form-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                Heure *
+              </label>
+              <input
+                type="time"
+                id="res-time"
+                name="time"
+                required
+                class="form-input"
+                placeholder="--:--"
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="res-guests" class="form-label">
+                <svg class="form-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                Nombre de personnes *
+              </label>
+              <select
+                id="res-guests"
+                name="guests"
+                required
+                class="form-input"
+              >
+                <option value="1">1 personne</option>
+                <option value="2" selected>2 personnes</option>
+                <option value="3">3 personnes</option>
+                <option value="4">4 personnes</option>
+                <option value="5">5 personnes</option>
+                <option value="6">6 personnes</option>
+                <option value="7">7 personnes</option>
+                <option value="8">8 personnes</option>
+                <option value="9">9 personnes</option>
+                <option value="10">10 personnes</option>
+                <option value="10+">10+ personnes</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="res-phone" class="form-label">
+                <svg class="form-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 0 1.72-2V7a2 2 0 0 0-2-1.72 12.84 12.84 0 0 0-.7-2.81 2 2 0 0 0-1.72 2z"></path>
+                </svg>
+                Téléphone *
+              </label>
+              <input
+                type="tel"
+                id="res-phone"
+                name="phone"
+                required
+                class="form-input"
+                placeholder="+33 6 12 34 56 78"
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="res-email" class="form-label">
+                <svg class="form-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                Email *
+              </label>
+              <input
+                type="email"
+                id="res-email"
+                name="email"
+                required
+                class="form-input"
+                placeholder="votre@email.com"
+              />
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="res-comments" class="form-label">
+              <svg class="form-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8.9z"></path>
+              </svg>
+              Commentaires (Allergies, préférences...)
+            </label>
+            <textarea
+              id="res-comments"
+              name="comments"
+              rows="4"
+              class="form-input"
+              placeholder="Indiquez vos préférences ou besoins spéciaux..."
+            ></textarea>
+          </div>
+
+          {/* Submit Button */}
+          <div class="form-actions">
+            <button type="submit" class="btn-submit">
+              Confirmer la réservation
+            </button>
+          </div>
+        </form>
+      </div>
     </section>
 
     <section id="gallery" class="section">
-      <div class="container"></div>
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Galerie</h2>
+          <p class="section-subtitle">Découvrez l'ambiance et nos créations culinaires</p>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1715692727499-cd7ba190587c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0aGllYm91ZGllbm5lJTIwcmljZmlzaCUyMGRpc2glMjg3NzYyMjk1fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Plat principal" />
+            <div class="gallery-overlay">
+              <h4>Thiéboudienne</h4>
+              <p>Notre plat signature</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1757715377671-01c20cfa1880?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlja2VuJTIwcmljZ291cm1ldCUyMHBsYXQlMjE3NzYyMzAyfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Yassa poulet" />
+            <div class="gallery-overlay">
+              <h4>Yassa Poulet</h4>
+              <p>Saveur citronnée et oignon</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1765118437934-ef3a79885243?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWF0JTIwc3RldyUyMGJvd2clMjMwMjMwfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Mafé agneau" />
+            <div class="gallery-overlay">
+              <h4>Mafé Agneau</h4>
+              <p>Sauce arachide savoureuse</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1677094544034-01421fc6c874?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmlsbGVkJTIwZmlzaCUyMGZyaWNhaW58ZW58MXx8fHwxNzE2OTgyNDQxfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Poisson braisé" />
+            <div class="gallery-overlay">
+              <h4>Poisson Braisé</h4>
+              <p>Frais et parfumé</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1671523557643-b80db31443d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2NvbnV0JTIwY3JlYW0lMjB1ZGRpbmclMjE3NzE3NjIyOTk4fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Thiakry" />
+            <div class="gallery-overlay">
+              <h4>Thiakry Coco</h4>
+              <p>Dessert traditionnel</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1725790803859-edc661663bb4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZWQlMjBvY2t0YWlsJTIwaGliaXNjdXMlMjRyaW5rfGVufDF8fHx8MTc3MTc2NDQ1fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Jus de bissap" />
+            <div class="gallery-overlay">
+              <h4>Jus de Bissap</h4>
+              <p>Boisson rafraîchissante</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1556909218-d0b4bfde6d6b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzZW5lJTIwYXJyaWNlJTIwZmFtaWx5fGVufDF8fHx8MTU1NzA4MjM0fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Accras" />
+            <div class="gallery-overlay">
+              <h4>Accras de Morue</h4>
+              <p>Beignets de poisson</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1530451444500-5dce90309851?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWJuJTIwc2FsYWQlMjBhZnJpY2FuJTIwbmllYmV8ZW58MXx8fHwxNzE3NjI0MzkfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Salade" />
+            <div class="gallery-overlay">
+              <h4>Salade Niébé</h4>
+              <p>Haricots et légumes frais</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1665582038443-7d55b4673c57?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmlsbGVkJTIwZmlzaCUyMHBsYXRlJTIwYWZyaWNhbnxlbnwxfHx8fDE3MTc2MjcxNjgwfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Yassa poisson" />
+            <div class="gallery-overlay">
+              <h4>Yassa Poisson</h4>
+              <p>Poisson mariné au citron</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="testimonials" class="section">
-      <div class="container"></div>
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Témoignages</h2>
+          <p class="section-subtitle">Ce que disent nos clients</p>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"Une expérience culinaire exceptionnelle ! Les saveurs authentiques du Sénégal dans un cadre chaleureux. Le thiéboudienne est divin !"</p>
+            <div class="testimonial-author">
+              <strong>Marie K.</strong>
+              <span>Client fidèle</span>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"L'accueil est formidable et la qualité des plats est irréprochable. Je reviens chaque semaine avec ma famille."</p>
+            <div class="testimonial-author">
+              <strong>Pierre L.</strong>
+              <span>Régulier</span>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"Le meilleur restaurant sénégalais de Paris ! Les portions sont généreuses et les prix très raisonnables."</p>
+            <div class="testimonial-author">
+              <strong>Aminata B.</strong>
+              <span>Nouvelle cliente</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="section section_contact">
+    <section id="contact" class="section">
       <div class="container">
-        <div class="les_contact">
-          <h5 class="nous_contacter" aria-label="Nom du restaurant">
-            <span style="color: aliceblue">Nous</span>
-            <span style="color: #ffd700">Contacter</span>
-          </h5>
-          <h3 style="color: aliceblue; text-align: center">
-            N'hésitez pas à nous écrire pour toute question ou demande
-          </h3>
+        <div class="section-header">
+          <h2 class="section-title">Nous <span style="color: #D4AF37">Contacter</span></h2>
+          <p class="section-subtitle">N'hésitez pas à nous écrire pour toute question ou demande</p>
         </div>
 
         <div class="grid-two-columns-equal">
@@ -119,17 +444,24 @@
               </div>
             </section>
 
-            <section class="card beige" aria-label="Horaires d'ouverture" style="margin-top: 1rem">
+            <section
+              class="card beige"
+              aria-label="Horaires d'ouverture"
+              style="margin-top: 1rem"
+            >
               <h2>Horaires d'ouverture</h2>
               <div class="hours" aria-label="Horaires">
                 <div class="hours-line">
-                  <span class="hours-label">Lundi - Jeudi</span><span class="hours-value">12h00 - 22h00</span>
+                  <span class="hours-label">Lundi - Jeudi</span
+                  ><span class="hours-value">12h00 - 22h00</span>
                 </div>
                 <div class="hours-line">
-                  <span class="hours-label">Vendredi - Samedi</span><span class="hours-value">12h00 - 23h30</span>
+                  <span class="hours-label">Vendredi - Samedi</span
+                  ><span class="hours-value">12h00 - 23h30</span>
                 </div>
                 <div class="hours-line">
-                  <span class="hours-label">Dimanche</span><span class="hours-value">12h00 - 21h00</span>
+                  <span class="hours-label">Dimanche</span
+                  ><span class="hours-value">12h00 - 21h00</span>
                 </div>
               </div>
             </section>
@@ -137,28 +469,64 @@
 
           <section class="card beige" aria-label="Formulaire de contact">
             <h2>Envoyez-nous un message</h2>
-            <form action="#" method="post" onsubmit="event.preventDefault(); alert('Message envoyé (demo)');">
+            <form
+              action="#"
+              method="post"
+              onsubmit="
+                event.preventDefault();
+                alert('Message envoyé (demo)');
+              "
+            >
               <div class="form-field">
                 <label for="nom">Nom *</label>
-                <input id="nom" name="nom" type="text" placeholder="Votre nom" required />
+                <input
+                  id="nom"
+                  name="nom"
+                  type="text"
+                  placeholder="Votre nom"
+                  required
+                />
               </div>
               <div class="form-field">
                 <label for="telephone">Téléphone *</label>
-                <input id="telephone" name="telephone" type="tel" placeholder="+225 07 78 01 45 37" required />
+                <input
+                  id="telephone"
+                  name="telephone"
+                  type="tel"
+                  placeholder="+225 07 78 01 45 37"
+                  required
+                />
               </div>
               <div class="form-field">
                 <label for="email">Email *</label>
-                <input id="email" name="email" type="email" placeholder="votre@email.com" required />
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="votre@email.com"
+                  required
+                />
               </div>
               <div class="form-field">
-                <label for="objet">Objet *</label>
-                <input id="objet" name="objet" type="text" placeholder="Objet de votre message" required />
+                <label for="objet">Objet</label>
+                <input
+                  id="objet"
+                  name="objet"
+                  type="text"
+                  placeholder="Sujet de votre message"
+                />
               </div>
               <div class="form-field">
                 <label for="message">Message *</label>
-                <textarea id="message" name="message" rows="4" placeholder="Votre message..." required></textarea>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Votre message..."
+                  required
+                ></textarea>
               </div>
-              <button type="submit" class="btn-submit">Envoyer</button>
+              <button type="submit" class="btn-submit">Envoyer le message</button>
             </form>
           </section>
         </div>
@@ -166,62 +534,343 @@
     </section>
 
     <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-col">
-          <div class="nav-logo">
-            <a href="#home" class="logo-link" style="color: #fff;">
-              <span class="logo-ld">LD</span>
-              <span style="color: #ffd700">Délice Sénégalais</span>
-            </a>
+          <div class="container footer-container">
+            <div class="footer-col">
+              <div class="nav-logo">
+                <a href="#home" class="logo-link">
+                  <span class="logo-ld">LD</span>
+                  <span style="color: #ffd700">Délice Sénégalais</span>
+                </a>
+              </div>
+              <p>
+                L'authenticité africaine sublimée par la haute gastronomie. </br> Une expérience culinaire unique à Paris.
+              </p>
+            </div>
+
+            <div class="footer-col">
+              <h4>Liens rapides</h4>
+              <ul>
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#reservation">Réservation</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4>Horaires</h4>
+              <p>Lun - Jeu: 12h - 22h</p>
+              <p>Ven - Sam: 12h - 23h30</p>
+              <p>Dimanche: 12h - 21h</p>
+            </div>
+
+            <div class="footer-col">
+              <h4>Suivez-nous</h4>
+              <div class="social-links">
+                <a href="#" aria-label="Facebook"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    fill="currentColor"
+                    class="bi bi-facebook"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
+                    /></svg
+                ></a>
+                <a href="#" aria-label="Instagram"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    fill="currentColor"
+                    class="bi bi-whatsapp"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"
+                    /></svg
+                ></a>
+                <a href="#" aria-label="Twitter"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    fill="currentColor"
+                    class="bi bi-messenger"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M0 7.76C0 3.301 3.493 0 8 0s8 3.301 8 7.76-3.493 7.76-8 7.76c-.81 0-1.586-.107-2.316-.307a.64.64 0 0 0-.427.03l-1.588.702a.64.64 0 0 1-.898-.566l-.044-1.423a.64.64 0 0 0-.215-.456C.956 12.108 0 10.092 0 7.76m5.546-1.459-2.35 3.728c-.225.358.214.761.551.506l2.525-1.916a.48.48 0 0 1 .578-.002l1.869 1.402a1.2 1.2 0 0 0 1.735-.32l2.35-3.728c.226-.358-.214-.761-.551-.506L9.728 7.381a.48.48 0 0 1-.578.002L7.281 5.98a1.2 1.2 0 0 0-1.735.32z"
+                    /></svg
+                ></a>
+              </div>
+              <p class="footer-address">
+                Rue princesse <br />Côte d'ivoire, 01 BP 12345 Abidjan 01
+              </p>
+            </div>
           </div>
-          <p>
-            L'authenticité africaine sublimée par la haute gastronomie. <br/> Une expérience culinaire unique.
-          </p>
-        </div>
+          
+          <div class="footer-bottom">
+             <hr>
+             <div class="footer-bottom-content">
+            <p>&copy; 2026 Le Délice Sénégalais. Tous droits réservés.</p>
+            <P> </P>
+        
 
-        <div class="footer-col">
-          <h4>Liens rapides</h4>
-          <ul>
-            <li><a href="#home">Accueil</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#reservation">Réservation</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Horaires</h4>
-          <p>Lun - Jeu: 12h - 22h</p>
-          <p>Ven - Sam: 12h - 23h30</p>
-          <p>Dimanche: 12h - 21h</p>
-        </div>
-
-        <div class="footer-col">
-          <h4>Suivez-nous</h4>
-          <div class="social-links" style="display: flex; gap: 15px; margin-bottom: 15px;">
-            <a href="#" aria-label="Facebook">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/></svg>
-            </a>
-            <a href="#" aria-label="WhatsApp">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/></svg>
-            </a>
+            <p><a href=""> Mentions légales </a></p>
+           
+          <p><a href=""> Politique de confidentialité  </a></p>
           </div>
-          <p class="footer-address">
-            Rue princesse <br />Côte d'ivoire, 01 BP 12345 Abidjan 01
-          </p>
-        </div>
+          </div>
+        </footer>
       </div>
+    </section>
+    
+    <!-- Menu Popup -->
+    <div id="menuPopup" class="menu-popup">
+      <!-- Backdrop -->
+      <div class="menu-backdrop" onclick="closeMenuPopup()"></div>
       
-      <div class="footer-bottom">
-         <hr style="border-color: #333; margin-bottom: 20px;">
-         <div class="footer-bottom-content">
-          <p>&copy; 2026 Le Délice Sénégalais. Tous droits réservés.</p>
-          <p><a href="">Mentions légales</a></p>
-          <p><a href="">Politique de confidentialité</a></p>
+      <!-- Popup Content -->
+      <div class="menu-popup-content">
+        <!-- Header -->
+        <div class="menu-popup-header">
+          <h2 class="menu-popup-title">Menu Complet</h2>
+          <button class="menu-popup-close" onclick="closeMenuPopup()">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        
+        <!-- Menu Content -->
+        <div class="menu-popup-body">
+          <!-- Entrées -->
+          <div class="menu-category">
+            <h3 class="category-title">Entrées</h3>
+            <div class="menu-grid">
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1673188979255-e08a5791d193?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZnJpY2FuJTIwZnJpZWQlMjBwYXN0cnklMjBzYW1vc2F8ZW58MXx8fHwxNzcxNzYyMjk1fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Pastels au Thon" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Pastels au Thon</span>
+                  <span class="menu-item-price">12€</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1756137949459-8aad8455d040?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWVmJTIwZW1wYW5hZGElMjBtZWF0JTIwcGFzdHJ5fGVufDF8fHx8MTc3MTc2MjcxNHww&ixlib=rb-4.1.0&q=80&w=1080" alt="Pastels à la Viande" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Pastels à la Viande</span>
+                  <span class="menu-item-price">12€</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1517427743529-b2946c4be119?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2RmaXNoJTIwZnJpdHRlcnMlMjBnb2xkZW4lMjBjcmlzcHl8ZW58MXx8fHwxNzcxNzYyNzE0fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Accras de Morue" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Accras de Morue</span>
+                  <span class="menu-item-price">14€</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1530451444500-5dce90309851?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWFuJTIwc2FsYWQlMjBhZnJpY2FuJTIwbmllYmV8ZW58MXx8fHwxNzcxNzYyNDM5fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Salade Niébé" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Salade Niébé</span>
+                  <span class="menu-item-price">10€</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Plats Principaux -->
+          <div class="menu-category">
+            <h3 class="category-title">Plats Principaux</h3>
+            <div class="menu-grid">
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1715692727499-cd7ba190587c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0aGllYm91ZGllbm5lJTIwc2VuZWdhbGVzZSUyMHJpY2UlMjBmaXNoJTIwZGlzaHxlbnwxfHx8fDE3NzE3NjIyOTN8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Thiéboudienne (Riz au Poisson)" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Thiéboudienne (Riz au Poisson)</span>
+                  <span class="menu-item-price">28€</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1757715377671-01c20cfa1880?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlja2VuJTIwcmljZSUyMGdvdXJtZXQlMjBwbGF0ZXxlbnwxfHx8fDE3NzE3NjIzMDJ8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Yassa Poulet" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Yassa Poulet</span>
+                  <span class="menu-item-price">24€</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1665582038443-7d55b4673c57?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmlsbGVkJTIwZmlzaCUyMHBsYXRlJTIwYWZyaWNhbnxlbnwxfHx8fDE3NzE3NjI3MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Yassa Poisson" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Yassa Poisson</span>
+                  <span class="menu-item-price">26€</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1765118437934-ef3a79885243?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWF0JTIwc3RldyUyMGJvd2wlMjByZXN0YXVyYW50fGVufDF8fHx8MTc3MTc2MjMwMnww&ixlib=rb-4.1.0&q=80&w=1080" alt="Mafé Agneau" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Mafé Agneau</span>
+                  <span class="menu-item-price">30€</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1665332561290-cc6757172890?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlja2VuJTIwcGVhbnV0JTIwc3RldyUyMGFmcmljYW58ZW58MXx8fHwxNzcxNzYyNzE1fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Mafé Poulet" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Mafé Poulet</span>
+                  <span class="menu-item-price">24€</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1741026079488-f22297dc3036?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxqb2xsb2YlMjByaWNlJTIwd2VzdCUyMGFmcmljYW4lMjB0b21hdG98ZW58MXx8fHwxNzcxNzYyMjk0fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Jollof Rice Royal" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Jollof Rice Royal</span>
+                  <span class="menu-item-price">26€</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1676700310614-600f2aa255ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZnJpY2FuJTIwY2hpY2tlbiUyMHBsYW50YWlucyUyMGRpc2h8ZW58MXx8fHwxNzcxNzYyNDQwfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Poulet DG" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Poulet DG</span>
+                  <span class="menu-item-price">28€</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1677094544034-01421fc6c874?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmlsbGVkJTIwZmlzaCUyMGFmcmljYW4lMjBjdWlzaW5lfGVufDF8fHx8MTc3MTY5ODI0MXww&ixlib=rb-4.1.0&q=80&w=1080" alt="Poisson Braisé" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Poisson Braisé</span>
+                  <span class="menu-item-price">32€</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Desserts -->
+          <div class="menu-category">
+            <h3 class="category-title">Desserts</h3>
+            <div class="menu-grid">
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1671523557643-b80db31443d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2NvbnV0JTIwY3JlYW0lMjBkZXNzZXJ0JTIwcHVkZGluZ3xlbnwxfHx8fDE3NzE3NjIyOTl8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Thiakry Coco" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Thiakry Coco</span>
+                  <span class="menu-item-price">10€</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1626256139204-8b4c568dd71b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2YW5pbGxhJTIwcHVkZGluZyUyMGRlc3NlcnQlMjBjcmVhbXxlbnwxfHx8fDE3NzE3NjI0NDJ8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Chakery Vanille" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Chakery Vanille</span>
+                  <span class="menu-item-price">10€</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1666288937917-785145cec5df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaW5rJTIwZGVzc2VydCUyMGNyZWFtJTIwcHVkZGluZ3xlbnwxfHx8fDE3NzE3NjI3MTV8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Crème de Bissap" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Crème de Bissap</span>
+                  <span class="menu-item-price">8€</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1696824818288-83fd13091064?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cm9waWNhbCUyMGZydWl0JTIwcGxhdHRlciUyMGZyZXNofGVufDF8fHx8MTc3MTc2MjQ0MXww&ixlib=rb-4.1.0&q=80&w=1080" alt="Fruits de Saison" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Fruits de Saison</span>
+                  <span class="menu-item-price">8€</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Boissons -->
+          <div class="menu-category">
+            <h3 class="category-title">Boissons</h3>
+            <div class="menu-grid">
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1725790803859-edc661663bb4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZWQlMjBjb2NrdGFpbCUyMGhpYmlzY3VzJTIwZHJpbmt8ZW58MXx8fHwxNzcxNzYyNDQ1fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Jus de Bissap" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Jus de Bissap</span>
+                  <span class="menu-item-price">6€</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1620205252136-0944971c1ca2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnaW5nZXIlMjBqdWljZSUyMGJldmVyYWdlJTIwZnJlc2h8ZW58MXx8fHwxNzcxNzYyNDQxfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Jus de Gingembre" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Jus de Gingembre</span>
+                  <span class="menu-item-price">6€</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1517448931760-9bf4414148c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3aGl0ZSUyMG1pbGt5JTIwZHJpbmslMjBiYW9iYWJ8ZW58MXx8fHwxNzcxNzYyNzE2fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Bouye (Jus de Baobab)" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Bouye (Jus de Baobab)</span>
+                  <span class="menu-item-price">7€</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-image">
+                  <img src="https://images.unsplash.com/photo-1763637674227-e404f9039ae7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cm9waWNhbCUyMGNvY2t0YWlsJTIwb3JhbmdlJTIwanVpY2V8ZW58MXx8fHwxNzcxNzYyNDQ1fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Cocktail Maison" />
+                </div>
+                <div class="menu-item-content">
+                  <span class="menu-item-name">Cocktail Maison</span>
+                  <span class="menu-item-price">12€</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Menu Dégustation -->
+          <div class="menu-tasting">
+            <p class="tasting-text">
+              <span class="tasting-title">Menu Dégustation 3 plats :</span> 
+              <span class="tasting-price">45€</span>
+              <br />
+              <span class="tasting-title">Menu Dégustation 5 plats :</span> 
+              <span class="tasting-price">65€</span>
+            </p>
+          </div>
         </div>
       </div>
-    </footer>
-
+    </div>
+    
     <script src="js/script.js"></script>
   </body>
 </html>

@@ -94,4 +94,109 @@ document.addEventListener('DOMContentLoaded', () => {
     sectionObserver.observe(section);
   });
 
+  // ==========================================
+  // 5. MENU POPUP
+  // ==========================================
+  const menuPopup = document.getElementById('menuPopup');
+  const menuButton = document.querySelector('[onclick="openMenuPopup(event)"]');
+
+  // Fonction pour ouvrir le popup menu
+  window.openMenuPopup = function(event) {
+    event.preventDefault();
+    if (menuPopup) {
+      menuPopup.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Empêche le scroll du body
+    }
+  };
+
+  // Fonction pour fermer le popup menu
+  window.closeMenuPopup = function() {
+    if (menuPopup) {
+      menuPopup.classList.remove('active');
+      document.body.style.overflow = ''; // Réactive le scroll du body
+    }
+  };
+
+  // Fermer le popup avec la touche Escape
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && menuPopup && menuPopup.classList.contains('active')) {
+      closeMenuPopup();
+    }
+  });
+
+  // Fermer le popup au clic sur le backdrop (déjà géré en HTML avec onclick)
+  // mais on ajoute une sécurité ici
+  if (menuPopup) {
+    menuPopup.addEventListener('click', (event) => {
+      if (event.target === menuPopup || event.target.classList.contains('menu-backdrop')) {
+        closeMenuPopup();
+      }
+    });
+  }
+
+  // ==========================================
+  // 6. FORMULAIRE DE RÉSERVATION
+  // ==========================================
+  
+  // Fonction pour gérer la soumission du formulaire de réservation
+  window.handleReservation = function(event) {
+    event.preventDefault();
+    
+    // Récupérer les données du formulaire
+    const formData = {
+      name: document.getElementById('res-name').value,
+      phone: document.getElementById('res-phone').value,
+      email: document.getElementById('res-email').value,
+      date: document.getElementById('res-date').value,
+      time: document.getElementById('res-time').value,
+      guests: document.getElementById('res-guests').value,
+      comments: document.getElementById('res-comments').value
+    };
+    
+    // Validation simple
+    if (!formData.name || !formData.phone || !formData.email || !formData.date || !formData.time || !formData.guests) {
+      alert('Veuillez remplir tous les champs obligatoires.');
+      return;
+    }
+    
+    // Simuler l'envoi de la réservation
+    console.log('Réservation soumise:', formData);
+    
+    // Afficher un message de confirmation
+    const confirmationMessage = `
+      Réservation confirmée !
+      
+      Détails de votre réservation:
+      • Nom: ${formData.name}
+      • Téléphone: ${formData.phone}
+      • Email: ${formData.email}
+      • Date: ${formData.date}
+      • Heure: ${formData.time}
+      • Nombre de personnes: ${formData.guests}
+      ${formData.comments ? `• Commentaires: ${formData.comments}` : ''}
+      
+      Vous recevrez une confirmation par email ou téléphone.
+      
+      Merci de votre confiance !
+    `;
+    
+    // Afficher une boîte de dialogue stylisée
+    if (confirm(confirmationMessage)) {
+      // Réinitialiser le formulaire
+      document.querySelector('.reservation-form').reset();
+      
+      // Optionnel: scroller vers le haut
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  // Définir la date minimale à aujourd'hui
+  document.addEventListener('DOMContentLoaded', () => {
+    const dateInput = document.getElementById('res-date');
+    if (dateInput) {
+      const today = new Date().toISOString().split('T')[0];
+      dateInput.min = today;
+    }
+  });
+
 });
