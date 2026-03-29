@@ -8,13 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.nav-link');
 
   if (hamburger && navMenu) {
-    // Ouvrir/Fermer le menu au clic sur le hamburger
     hamburger.addEventListener('click', () => {
       hamburger.classList.toggle('active');
       navMenu.classList.toggle('active');
     });
 
-    // Fermer le menu automatiquement quand on clique sur un lien
     navLinks.forEach((link) => {
       link.addEventListener('click', () => {
         hamburger.classList.remove('active');
@@ -46,31 +44,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const appearOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.15 // Déclenche l'animation quand 15% de la section est visible
+    threshold: 0.15
   };
 
   const appearOnScroll = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target); // Arrête d'observer une fois apparu
+        observer.unobserve(entry.target); 
       }
     });
   }, appearOptions);
 
   sections.forEach((sec) => {
-    sec.classList.add('section-hidden'); // Cache la section au chargement (nécessite le CSS)
+    sec.classList.add('section-hidden'); 
     appearOnScroll.observe(sec);
   });
 
   // ==========================================
   // 4. ILLUMINATION DES LIENS AU SCROLL (SCROLL SPY)
   // ==========================================
-  // On sélectionne le header (Accueil) et toutes les sections
   const spySections = document.querySelectorAll('header, section'); 
   
-  // On configure l'observateur pour déclencher le changement quand 
-  // la section atteint environ le milieu haut de l'écran
   const spyOptions = {
     root: null,
     rootMargin: '-20% 0px -70% 0px', 
@@ -79,15 +74,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const sectionObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        // On récupère l'ID de la section visible (ex: 'home', 'menu', 'contact')
         const currentId = entry.target.getAttribute('id');
         
-        // On retire la classe 'active' de TOUS les liens
         navLinks.forEach((link) => {
           link.classList.remove('active');
         });
 
-        // On cherche le lien qui correspond à l'ID et on lui ajoute 'active'
         if (currentId) {
           const activeLink = document.querySelector(`.nav-link[href="#${currentId}"]`);
           if (activeLink) {
@@ -98,7 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, spyOptions);
 
-  // On dit à l'observateur de surveiller chaque section
   spySections.forEach((section) => {
     sectionObserver.observe(section);
   });
